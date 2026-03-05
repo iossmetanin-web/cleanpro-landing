@@ -1,0 +1,1574 @@
+▲ Next.js 16.1.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://21.0.2.210:3000
+- Environments: .env
+
+✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next/dev/types/**/*.ts'
+
+  The following mandatory changes were made to your tsconfig.json:
+
+  	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+
+✓ Ready in 1235ms
+○ Compiling / ...
+ GET / 200 in 3.3s (compile: 3.0s, render: 282ms)
+ POST /invoke 404 in 551ms (compile: 472ms, render: 79ms)
+ GET / 200 in 25ms (compile: 3ms, render: 22ms)
+ GET / 200 in 48ms (compile: 8ms, render: 40ms)
+ GET / 200 in 35ms (compile: 4ms, render: 31ms)
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:4:1
+Module not found: Can't resolve 'gsap'
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:5:1
+Module not found: Can't resolve 'gsap/ScrollTrigger'
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useRef[33m,[39m useState } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { gsap } [36mfrom[39m [32m"gsap"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { [33mScrollTrigger[39m } [36mfrom[39m [32m"gsap/ScrollTrigger"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m { [33mCheck[39m[33m,[39m [33mSparkles[39m[33m,[39m [33mShield[39m[33m,[39m [33mPhone[39m[33m,[39m [33mMail[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mArrowRight[39m[33m,[39m [33mStar[39m[33m,[39m [33mClock[39m[33m,[39m [33mDroplets[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m gsap[33m.[39mregisterPlugin([33mScrollTrigger[39m)[33m;[39m[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 681ms
+ GET / 200 in 77ms (compile: 60ms, render: 16ms)
+ GET / 200 in 109ms (compile: 3ms, render: 106ms)
+✓ Compiled in 222ms
+ GET / 200 in 73ms (compile: 46ms, render: 26ms)
+ GET / 200 in 86ms (compile: 1785µs, render: 84ms)
+ GET / 200 in 24ms (compile: 3ms, render: 21ms)
+⚠ Cross origin request detected from preview-chat-fff155b1-a6e3-410c-923a-5337e2c97b5f.space.z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+✓ Compiled in 111ms
