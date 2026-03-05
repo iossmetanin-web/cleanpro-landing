@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Check, Sparkles, Shield, Phone, Mail, MapPin, ChevronRight, ArrowRight, Star, Clock, Droplets } from "lucide-react";
+import { Check, Sparkles, Shield, Phone, Mail, MapPin, ArrowRight, Droplets, Menu, X } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,16 +37,17 @@ const BRAND = {
 };
 
 const PRESET = {
-  primary: "#2E4036",      // Moss
-  accent: "#CC5833",       // Clay
-  background: "#F2F0E9",   // Cream
-  dark: "#1A1A1A",         // Charcoal
+  primary: "#2E4036",
+  accent: "#CC5833",
+  background: "#F2F0E9",
+  dark: "#1A1A1A",
   text: "#1A1A1A",
   muted: "#5C5C5C"
 };
 
 export default function CleanProLanding() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const philosophyRef = useRef<HTMLDivElement>(null);
@@ -60,6 +61,15 @@ export default function CleanProLanding() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mobile menu on link click
+  const handleNavClick = (id: string) => {
+    setMobileMenuOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   // GSAP Animations
   useEffect(() => {
@@ -98,24 +108,6 @@ export default function CleanProLanding() {
         }
       });
 
-      // Protocol cards stacking
-      const protocolCards = gsap.utils.toArray(".protocol-card");
-      protocolCards.forEach((card: any, i) => {
-        if (i < protocolCards.length - 1) {
-          gsap.to(card, {
-            scale: 0.9,
-            filter: "blur(20px)",
-            opacity: 0.5,
-            scrollTrigger: {
-              trigger: protocolCards[i + 1],
-              start: "top 80%",
-              end: "top 20%",
-              scrub: 1
-            }
-          });
-        }
-      });
-
     });
 
     return () => ctx.revert();
@@ -124,128 +116,176 @@ export default function CleanProLanding() {
   return (
     <div className="min-h-screen overflow-x-hidden" style={{ background: PRESET.background }}>
       {/* Noise Overlay */}
-      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.05]" style={{
+      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03]" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
       }} />
 
       {/* NAVBAR */}
-      <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-40 transition-all duration-500 ${
+      <nav className={`fixed top-3 left-3 right-3 md:top-4 md:left-1/2 md:-translate-x-1/2 z-40 transition-all duration-500 ${
         scrolled 
-          ? "bg-[#F2F0E9]/60 backdrop-blur-xl border border-[#2E4036]/10" 
-          : "bg-transparent"
-      } rounded-full px-6 py-3 flex items-center gap-8`}>
-        <span className="font-bold text-lg" style={{ color: scrolled ? PRESET.primary : "#F2F0E9" }}>
-          CleanPro
-        </span>
-        <div className="hidden md:flex items-center gap-6 text-sm" style={{ color: scrolled ? PRESET.text : "#F2F0E9" }}>
-          <a href="#features" className="hover:opacity-70 transition-opacity">Услуги</a>
-          <a href="#philosophy" className="hover:opacity-70 transition-opacity">О нас</a>
-          <a href="#pricing" className="hover:opacity-70 transition-opacity">Цены</a>
+          ? "bg-[#F2F0E9]/95 backdrop-blur-xl shadow-lg" 
+          : "bg-[#F2F0E9]/80 backdrop-blur-md"
+      } rounded-2xl md:rounded-full px-4 md:px-6 py-3 md:py-3`}>
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <span className="font-bold text-lg md:text-xl" style={{ color: PRESET.primary }}>
+            CleanPro
+          </span>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-6 text-sm" style={{ color: PRESET.text }}>
+            <button onClick={() => handleNavClick('features')} className="hover:opacity-70 transition-opacity">Услуги</button>
+            <button onClick={() => handleNavClick('philosophy')} className="hover:opacity-70 transition-opacity">О нас</button>
+            <button onClick={() => handleNavClick('pricing')} className="hover:opacity-70 transition-opacity">Цены</button>
+          </div>
+          
+          {/* CTA Button */}
+          <button 
+            onClick={() => handleNavClick('contact')}
+            className="hidden md:block ml-4 px-5 py-2 rounded-full text-white text-sm font-medium transition-all duration-300 hover:scale-[1.03]"
+            style={{ background: PRESET.accent }}
+          >
+            {BRAND.cta}
+          </button>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden p-2 rounded-lg hover:bg-[#2E4036]/10 transition-colors"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            style={{ color: PRESET.primary }}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
-        <a 
-          href="#contact"
-          className="ml-4 px-5 py-2 rounded-full text-white text-sm font-medium transition-all duration-300 hover:scale-[1.03] relative overflow-hidden group"
-          style={{ background: PRESET.accent }}
-        >
-          <span className="relative z-10">{BRAND.cta}</span>
-          <span className="absolute inset-0 bg-[#B34A2A] transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-        </a>
+
+        {/* Mobile Menu */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ${mobileMenuOpen ? 'max-h-80 pt-4' : 'max-h-0'}`}>
+          <div className="flex flex-col gap-3 pb-2">
+            <button 
+              onClick={() => handleNavClick('features')}
+              className="text-left px-4 py-3 rounded-xl hover:bg-[#2E4036]/10 transition-colors font-medium"
+              style={{ color: PRESET.text }}
+            >
+              Услуги
+            </button>
+            <button 
+              onClick={() => handleNavClick('philosophy')}
+              className="text-left px-4 py-3 rounded-xl hover:bg-[#2E4036]/10 transition-colors font-medium"
+              style={{ color: PRESET.text }}
+            >
+              О нас
+            </button>
+            <button 
+              onClick={() => handleNavClick('pricing')}
+              className="text-left px-4 py-3 rounded-xl hover:bg-[#2E4036]/10 transition-colors font-medium"
+              style={{ color: PRESET.text }}
+            >
+              Цены
+            </button>
+            <button 
+              onClick={() => handleNavClick('contact')}
+              className="mx-4 py-3 rounded-full text-white text-center font-medium transition-all duration-300 hover:scale-[1.02]"
+              style={{ background: PRESET.accent }}
+            >
+              {BRAND.cta}
+            </button>
+          </div>
+        </div>
       </nav>
 
       {/* HERO */}
       <section 
         ref={heroRef}
-        className="relative h-[100dvh] flex items-end pb-24 px-6 md:px-16"
+        className="relative min-h-screen flex items-end pb-20 md:pb-32 pt-24 md:pt-32 px-4 md:px-16"
         style={{
-          background: `linear-gradient(to top, ${PRESET.primary} 0%, transparent 50%),
-                       url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80') center/cover`
+          background: `linear-gradient(to top, ${PRESET.primary} 0%, rgba(46, 64, 54, 0.7) 40%, transparent 70%),
+                       url('/cleaning-hero.jpg') center/cover`
         }}
       >
-        <div className="hero-content max-w-3xl">
-          <p className="text-[#F2F0E9]/70 text-sm tracking-[0.2em] uppercase mb-4">
+        <div className="hero-content max-w-3xl w-full">
+          <p className="text-[#F2F0E9]/80 text-xs md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase mb-3 md:mb-4 font-medium">
             Экологичный клининг
           </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6">
             <span className="block text-[#F2F0E9]" style={{ fontFamily: "Manrope, sans-serif", letterSpacing: "-0.02em" }}>
               Чистота — это
             </span>
             <span 
-              className="block text-5xl md:text-7xl lg:text-8xl italic"
+              className="block text-4xl sm:text-5xl md:text-7xl lg:text-8xl italic"
               style={{ fontFamily: "Playfair Display, serif", color: PRESET.accent }}
             >
               забота.
             </span>
           </h1>
-          <p className="text-[#F2F0E9]/80 text-lg md:text-xl max-w-xl mb-8" style={{ fontFamily: "Manrope, sans-serif" }}>
+          <p className="text-[#F2F0E9]/90 text-base md:text-lg lg:text-xl max-w-lg md:max-w-xl mb-6 md:mb-8 leading-relaxed" style={{ fontFamily: "Manrope, sans-serif" }}>
             Профессиональная уборка с использованием экологичных средств. Безопасно для вас, ваших детей и домашних животных.
           </p>
-          <a 
-            href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white text-lg font-medium transition-all duration-300 hover:scale-[1.03] group relative overflow-hidden"
+          <button 
+            onClick={() => handleNavClick('contact')}
+            className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-full text-white text-base md:text-lg font-medium transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
             style={{ background: PRESET.accent }}
           >
-            <span className="relative z-10">{BRAND.cta}</span>
-            <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-            <span className="absolute inset-0 bg-[#B34A2A] transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </a>
+            {BRAND.cta}
+            <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+          </button>
         </div>
       </section>
 
       {/* FEATURES */}
-      <section id="features" ref={featuresRef} className="py-24 px-6 md:px-16">
+      <section id="features" ref={featuresRef} className="py-16 md:py-24 px-4 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-sm tracking-[0.2em] uppercase mb-4" style={{ color: PRESET.accent }}>
+          <div className="text-center mb-10 md:mb-16">
+            <p className="text-xs md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase mb-3 md:mb-4 font-medium" style={{ color: PRESET.accent }}>
               Почему мы
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold" style={{ color: PRESET.primary }}>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold px-4" style={{ color: PRESET.primary }}>
               Три причины выбрать CleanPro
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {/* Card 1 — Shuffler */}
             <div 
-              className="feature-card rounded-[2rem] p-8 border border-[#2E4036]/10 shadow-lg"
+              className="feature-card rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-[#2E4036]/10 shadow-lg"
               style={{ background: PRESET.background }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: `${PRESET.primary}20` }}>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style={{ background: `${PRESET.primary}20` }}>
                   <Droplets className="w-5 h-5" style={{ color: PRESET.primary }} />
                 </div>
-                <h3 className="text-xl font-bold" style={{ color: PRESET.primary }}>{BRAND.features[0].title}</h3>
+                <h3 className="text-lg md:text-xl font-bold" style={{ color: PRESET.primary }}>{BRAND.features[0].title}</h3>
               </div>
-              <p className="text-sm mb-6" style={{ color: PRESET.muted }}>{BRAND.features[0].description}</p>
+              <p className="text-sm mb-6 leading-relaxed" style={{ color: PRESET.muted }}>{BRAND.features[0].description}</p>
               <ShufflerCard items={BRAND.features[0].items} accent={PRESET.accent} />
             </div>
 
             {/* Card 2 — Typewriter */}
             <div 
-              className="feature-card rounded-[2rem] p-8 border border-[#2E4036]/10 shadow-lg"
+              className="feature-card rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-[#2E4036]/10 shadow-lg"
               style={{ background: PRESET.background }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: `${PRESET.primary}20` }}>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style={{ background: `${PRESET.primary}20` }}>
                   <Shield className="w-5 h-5" style={{ color: PRESET.primary }} />
                 </div>
-                <h3 className="text-xl font-bold" style={{ color: PRESET.primary }}>{BRAND.features[1].title}</h3>
+                <h3 className="text-lg md:text-xl font-bold" style={{ color: PRESET.primary }}>{BRAND.features[1].title}</h3>
               </div>
-              <p className="text-sm mb-6" style={{ color: PRESET.muted }}>{BRAND.features[1].description}</p>
+              <p className="text-sm mb-6 leading-relaxed" style={{ color: PRESET.muted }}>{BRAND.features[1].description}</p>
               <TypewriterCard messages={BRAND.features[1].messages} accent={PRESET.accent} />
             </div>
 
             {/* Card 3 — Scheduler */}
             <div 
-              className="feature-card rounded-[2rem] p-8 border border-[#2E4036]/10 shadow-lg"
+              className="feature-card rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-[#2E4036]/10 shadow-lg sm:col-span-2 lg:col-span-1"
               style={{ background: PRESET.background }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: `${PRESET.primary}20` }}>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style={{ background: `${PRESET.primary}20` }}>
                   <Check className="w-5 h-5" style={{ color: PRESET.primary }} />
                 </div>
-                <h3 className="text-xl font-bold" style={{ color: PRESET.primary }}>{BRAND.features[2].title}</h3>
+                <h3 className="text-lg md:text-xl font-bold" style={{ color: PRESET.primary }}>{BRAND.features[2].title}</h3>
               </div>
-              <p className="text-sm mb-6" style={{ color: PRESET.muted }}>{BRAND.features[2].description}</p>
+              <p className="text-sm mb-6 leading-relaxed" style={{ color: PRESET.muted }}>{BRAND.features[2].description}</p>
               <SchedulerCard days={BRAND.features[2].days} accent={PRESET.accent} primary={PRESET.primary} />
             </div>
           </div>
@@ -256,22 +296,22 @@ export default function CleanProLanding() {
       <section 
         id="philosophy" 
         ref={philosophyRef}
-        className="relative py-32 px-6 md:px-16 overflow-hidden"
+        className="relative py-20 md:py-32 px-4 md:px-16 overflow-hidden"
         style={{ background: PRESET.primary }}
       >
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-15"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&q=80')`,
             backgroundSize: "cover",
             backgroundPosition: "center"
           }}
         />
-        <div className="philosophy-text relative max-w-4xl mx-auto text-center">
-          <p className="text-[#F2F0E9]/60 text-lg md:text-xl mb-8">
+        <div className="philosophy-text relative max-w-4xl mx-auto text-center px-4">
+          <p className="text-[#F2F0E9]/70 text-base md:text-lg lg:text-xl mb-6 md:mb-8 leading-relaxed">
             Большинство клининговых компаний фокусируются на: быстрой уборке и дешёвых химикатах.
           </p>
-          <p className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <p className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
             <span className="text-[#F2F0E9]">Мы фокусируемся на: </span>
             <span 
               className="italic"
@@ -284,18 +324,18 @@ export default function CleanProLanding() {
       </section>
 
       {/* PROTOCOL */}
-      <section ref={protocolRef} className="py-24 px-6 md:px-16">
+      <section ref={protocolRef} className="py-16 md:py-24 px-4 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-sm tracking-[0.2em] uppercase mb-4" style={{ color: PRESET.accent }}>
+          <div className="text-center mb-10 md:mb-16">
+            <p className="text-xs md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase mb-3 md:mb-4 font-medium" style={{ color: PRESET.accent }}>
               Как мы работаем
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold" style={{ color: PRESET.primary }}>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold" style={{ color: PRESET.primary }}>
               Простой процесс
             </h2>
           </div>
 
-          <div className="space-y-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               { step: "01", title: "Заявка", desc: "Оставьте заявку на сайте или позвоните нам. Мы уточним детали и рассчитаем стоимость.", icon: Phone },
               { step: "02", title: "План уборки", desc: "Подберём оптимальный набор услуг и составим индивидуальный план уборки.", icon: Sparkles },
@@ -303,26 +343,18 @@ export default function CleanProLanding() {
             ].map((item, i) => (
               <div 
                 key={i}
-                className="protocol-card sticky top-24 rounded-[2rem] p-8 md:p-12 border border-[#2E4036]/10 shadow-xl transition-all duration-500"
+                className="rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-[#2E4036]/10 shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
                 style={{ background: PRESET.background }}
               >
-                <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="flex flex-col items-center text-center">
                   <div 
-                    className="w-20 h-20 rounded-2xl flex items-center justify-center text-2xl font-mono font-bold shrink-0"
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center text-xl md:text-2xl font-mono font-bold mb-4 md:mb-6"
                     style={{ background: `${PRESET.primary}15`, color: PRESET.primary }}
                   >
                     {item.step}
                   </div>
-                  <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: PRESET.primary }}>{item.title}</h3>
-                    <p className="text-lg" style={{ color: PRESET.muted }}>{item.desc}</p>
-                  </div>
-                  <div 
-                    className="w-16 h-16 rounded-full flex items-center justify-center shrink-0"
-                    style={{ background: PRESET.accent }}
-                  >
-                    <item.icon className="w-8 h-8 text-white" />
-                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold mb-3" style={{ color: PRESET.primary }}>{item.title}</h3>
+                  <p className="text-sm md:text-base leading-relaxed" style={{ color: PRESET.muted }}>{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -331,18 +363,18 @@ export default function CleanProLanding() {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="py-24 px-6 md:px-16" style={{ background: `${PRESET.primary}08` }}>
+      <section id="pricing" className="py-16 md:py-24 px-4 md:px-16" style={{ background: `${PRESET.primary}08` }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-sm tracking-[0.2em] uppercase mb-4" style={{ color: PRESET.accent }}>
+          <div className="text-center mb-10 md:mb-16">
+            <p className="text-xs md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase mb-3 md:mb-4 font-medium" style={{ color: PRESET.accent }}>
               Стоимость
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold" style={{ color: PRESET.primary }}>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold" style={{ color: PRESET.primary }}>
               Прозрачные цены
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               { name: "Базовый", price: "от 2 500 ₽", desc: "Поддерживающая уборка", features: ["1-комнатная квартира", "Сухая и влажная уборка", "Уборка санузла", "Мытьё зеркал"] },
               { name: "Профессиональный", price: "от 4 500 ₽", desc: "Генеральная уборка", features: ["До 3-х комнат", "Всё из базового +", "Мытьё окон изнутри", "Уборка балкона"], featured: true },
@@ -350,9 +382,9 @@ export default function CleanProLanding() {
             ].map((plan, i) => (
               <div 
                 key={i}
-                className={`rounded-[2rem] p-8 border transition-all duration-300 hover:scale-[1.02] ${
+                className={`rounded-2xl md:rounded-[2rem] p-6 md:p-8 border transition-all duration-300 hover:scale-[1.02] ${
                   plan.featured 
-                    ? "ring-2 scale-105" 
+                    ? "ring-2 sm:scale-105" 
                     : ""
                 }`}
                 style={{ 
@@ -361,26 +393,26 @@ export default function CleanProLanding() {
                   color: plan.featured ? "#F2F0E9" : PRESET.text
                 }}
               >
-                <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
+                <h3 className="text-lg md:text-xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-sm opacity-70 mb-4">{plan.desc}</p>
-                <p className="text-3xl font-bold mb-6">{plan.price}</p>
+                <p className="text-2xl md:text-3xl font-bold mb-6">{plan.price}</p>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((f, j) => (
                     <li key={j} className="flex items-center gap-2 text-sm">
-                      <Check className="w-4 h-4" style={{ color: PRESET.accent }} />
-                      {f}
+                      <Check className="w-4 h-4 shrink-0" style={{ color: PRESET.accent }} />
+                      <span>{f}</span>
                     </li>
                   ))}
                 </ul>
-                <a 
-                  href="#contact"
-                  className={`block text-center py-3 rounded-full font-medium transition-all duration-300 hover:scale-[1.03] ${
+                <button 
+                  onClick={() => handleNavClick('contact')}
+                  className={`block w-full text-center py-3 rounded-full font-medium transition-all duration-300 hover:scale-[1.03] ${
                     plan.featured ? "text-[#1A1A1A]" : "text-white"
                   }`}
                   style={{ background: plan.featured ? PRESET.accent : PRESET.primary }}
                 >
                   {BRAND.cta}
-                </a>
+                </button>
               </div>
             ))}
           </div>
@@ -388,22 +420,22 @@ export default function CleanProLanding() {
       </section>
 
       {/* CONTACT / CTA */}
-      <section id="contact" className="py-24 px-6 md:px-16">
+      <section id="contact" className="py-16 md:py-24 px-4 md:px-16">
         <div 
-          className="max-w-4xl mx-auto rounded-[3rem] p-8 md:p-16 text-center"
+          className="max-w-4xl mx-auto rounded-3xl md:rounded-[3rem] p-8 md:p-16 text-center"
           style={{ background: PRESET.primary }}
         >
-          <Sparkles className="w-12 h-12 mx-auto mb-6" style={{ color: PRESET.accent }} />
-          <h2 className="text-3xl md:text-5xl font-bold text-[#F2F0E9] mb-4">
+          <Sparkles className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4 md:mb-6" style={{ color: PRESET.accent }} />
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#F2F0E9] mb-3 md:mb-4">
             Готовы к чистоте?
           </h2>
-          <p className="text-[#F2F0E9]/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-[#F2F0E9]/70 text-base md:text-lg mb-6 md:mb-8 max-w-lg mx-auto leading-relaxed">
             Оставьте заявку и получите бесплатный расчёт стоимости уборки в течение 15 минут
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <a 
               href={`tel:${BRAND.phone}`}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-white text-lg font-medium transition-all duration-300 hover:scale-[1.03]"
+              className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-full text-white text-base md:text-lg font-medium transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
               style={{ background: PRESET.accent }}
             >
               <Phone className="w-5 h-5" />
@@ -411,7 +443,7 @@ export default function CleanProLanding() {
             </a>
             <a 
               href={`https://wa.me/${BRAND.phone.replace(/\D/g, '')}`}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-lg font-medium border-2 border-[#F2F0E9]/30 text-[#F2F0E9] transition-all duration-300 hover:scale-[1.03] hover:border-[#F2F0E9]/60"
+              className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-medium border-2 border-[#F2F0E9]/30 text-[#F2F0E9] transition-all duration-300 hover:scale-[1.03] hover:border-[#F2F0E9]/60 active:scale-[0.98]"
             >
               Написать в WhatsApp
             </a>
@@ -421,60 +453,60 @@ export default function CleanProLanding() {
 
       {/* FOOTER */}
       <footer 
-        className="rounded-t-[4rem] pt-16 pb-8 px-6 md:px-16"
+        className="rounded-t-[2rem] md:rounded-t-[4rem] pt-12 md:pt-16 pb-6 md:pb-8 px-4 md:px-16"
         style={{ background: PRESET.dark }}
       >
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            <div>
-              <h3 className="text-xl font-bold text-[#F2F0E9] mb-4">CleanPro</h3>
-              <p className="text-[#F2F0E9]/60 text-sm mb-4">{BRAND.tagline}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 mb-10 md:mb-12">
+            <div className="col-span-2 md:col-span-1">
+              <h3 className="text-lg md:text-xl font-bold text-[#F2F0E9] mb-3 md:mb-4">CleanPro</h3>
+              <p className="text-[#F2F0E9]/60 text-sm mb-4 leading-relaxed">{BRAND.tagline}</p>
               <div className="flex items-center gap-2 text-sm">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-[#F2F0E9]/60 font-mono">Система активна</span>
+                <span className="text-[#F2F0E9]/60 font-mono text-xs md:text-sm">Система активна</span>
               </div>
             </div>
             <div>
-              <h4 className="text-[#F2F0E9] font-medium mb-4">Услуги</h4>
+              <h4 className="text-[#F2F0E9] font-medium mb-3 md:mb-4">Услуги</h4>
               <ul className="space-y-2 text-[#F2F0E9]/60 text-sm">
-                <li><a href="#" className="hover:text-[#F2F0E9] transition-colors">Поддерживающая уборка</a></li>
-                <li><a href="#" className="hover:text-[#F2F0E9] transition-colors">Генеральная уборка</a></li>
-                <li><a href="#" className="hover:text-[#F2F0E9] transition-colors">Уборка после ремонта</a></li>
-                <li><a href="#" className="hover:text-[#F2F0E9] transition-colors">Химчистка мебели</a></li>
+                <li><button onClick={() => handleNavClick('features')} className="hover:text-[#F2F0E9] transition-colors text-left">Поддерживающая уборка</button></li>
+                <li><button onClick={() => handleNavClick('features')} className="hover:text-[#F2F0E9] transition-colors text-left">Генеральная уборка</button></li>
+                <li><button onClick={() => handleNavClick('features')} className="hover:text-[#F2F0E9] transition-colors text-left">Уборка после ремонта</button></li>
+                <li><button onClick={() => handleNavClick('features')} className="hover:text-[#F2F0E9] transition-colors text-left">Химчистка мебели</button></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-[#F2F0E9] font-medium mb-4">Компания</h4>
+              <h4 className="text-[#F2F0E9] font-medium mb-3 md:mb-4">Компания</h4>
               <ul className="space-y-2 text-[#F2F0E9]/60 text-sm">
-                <li><a href="#" className="hover:text-[#F2F0E9] transition-colors">О нас</a></li>
-                <li><a href="#" className="hover:text-[#F2F0E9] transition-colors">Отзывы</a></li>
-                <li><a href="#" className="hover:text-[#F2F0E9] transition-colors">Карьера</a></li>
-                <li><a href="#" className="hover:text-[#F2F0E9] transition-colors">Блог</a></li>
+                <li><button onClick={() => handleNavClick('philosophy')} className="hover:text-[#F2F0E9] transition-colors text-left">О нас</button></li>
+                <li><button className="hover:text-[#F2F0E9] transition-colors text-left">Отзывы</button></li>
+                <li><button className="hover:text-[#F2F0E9] transition-colors text-left">Карьера</button></li>
+                <li><button className="hover:text-[#F2F0E9] transition-colors text-left">Блог</button></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-[#F2F0E9] font-medium mb-4">Контакты</h4>
+              <h4 className="text-[#F2F0E9] font-medium mb-3 md:mb-4">Контакты</h4>
               <ul className="space-y-3 text-[#F2F0E9]/60 text-sm">
                 <li className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4 shrink-0" />
                   <a href={`tel:${BRAND.phone}`} className="hover:text-[#F2F0E9] transition-colors">{BRAND.phone}</a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4 shrink-0" />
                   <a href={`mailto:${BRAND.email}`} className="hover:text-[#F2F0E9] transition-colors">{BRAND.email}</a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
+                  <MapPin className="w-4 h-4 shrink-0" />
                   <span>Москва, Россия</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-[#F2F0E9]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-[#F2F0E9]/40 text-sm">© 2026 CleanPro. Все права защищены.</p>
-            <div className="flex gap-6 text-[#F2F0E9]/40 text-sm">
-              <a href="#" className="hover:text-[#F2F0E9]/60 transition-colors">Политика конфиденциальности</a>
-              <a href="#" className="hover:text-[#F2F0E9]/60 transition-colors">Условия использования</a>
+          <div className="border-t border-[#F2F0E9]/10 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-[#F2F0E9]/40 text-xs md:text-sm">© 2026 CleanPro. Все права защищены.</p>
+            <div className="flex gap-4 md:gap-6 text-[#F2F0E9]/40 text-xs md:text-sm">
+              <button className="hover:text-[#F2F0E9]/60 transition-colors">Политика конфиденциальности</button>
+              <button className="hover:text-[#F2F0E9]/60 transition-colors">Условия использования</button>
             </div>
           </div>
         </div>
@@ -500,24 +532,24 @@ function ShufflerCard({ items, accent }: { items: string[], accent: string }) {
   }, []);
 
   return (
-    <div className="relative h-32 overflow-hidden">
+    <div className="relative h-28 md:h-32 overflow-hidden">
       {displayItems.map((item, i) => (
         <div
           key={`${item}-${i}`}
           className="absolute w-full transition-all duration-700"
           style={{
-            top: `${i * 28}px`,
+            top: `${i * 26}px`,
             opacity: 1 - i * 0.25,
             transform: `scale(${1 - i * 0.05})`,
             zIndex: 3 - i
           }}
         >
           <div 
-            className="px-4 py-3 rounded-xl text-sm font-medium"
+            className="px-4 py-3 rounded-xl text-sm font-medium inline-flex items-center"
             style={{ background: `${accent}15`, color: accent }}
           >
-            <Check className="w-4 h-4 inline mr-2" />
-            {item}
+            <Check className="w-4 h-4 mr-2 shrink-0" />
+            <span>{item}</span>
           </div>
         </div>
       ))}
@@ -565,11 +597,11 @@ function TypewriterCard({ messages, accent }: { messages: string[], accent: stri
   return (
     <div className="font-mono text-sm">
       <div className="flex items-center gap-2 mb-3">
-        <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: accent }} />
+        <span className="w-2 h-2 rounded-full animate-pulse shrink-0" style={{ background: accent }} />
         <span className="text-xs uppercase tracking-wider" style={{ color: accent }}>Live Feed</span>
       </div>
       <div 
-        className="px-4 py-3 rounded-xl min-h-[80px]"
+        className="px-4 py-3 rounded-xl min-h-[70px] md:min-h-[80px]"
         style={{ background: "#1A1A1A08" }}
       >
         <span style={{ color: "#5C5C5C" }}>{"> "}</span>
